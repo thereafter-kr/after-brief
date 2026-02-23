@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thereafter - After Brief</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PASSWORD GATE -->
+  <div class="gate" id="gate">
+    <div class="gate-inner">
+      <img src="logo_white.png" alt="thereafter" class="gate-logo">
+      <h1 class="gate-title">After Brief</h1>
+      <p class="gate-desc">접근 권한이 필요합니다</p>
+      <div class="gate-form">
+        <input type="password" class="gate-input" id="gate-input" placeholder="비밀번호 입력" autocomplete="off">
+        <button class="gate-btn" id="gate-btn">입장</button>
+      </div>
+      <p class="gate-error" id="gate-error"></p>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="brand">
+          <img src="logo_white.png" alt="thereafter" class="brand-logo">
+        </div>
+      </div>
+      <h1 class="main-title">After Brief</h1>
+      <p class="hero-desc">20슬라이드 메시지 설계 에디터</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="content-inner">
+
+      <!-- JSON INPUT SECTION -->
+      <div id="inputSection">
+        <div class="step">
+          <div class="step-header">
+            <div class="step-num">1</div>
+            <div class="step-title">There Match JSON 붙여넣기</div>
+            <div class="step-sub">JSON 다운로드 결과</div>
+          </div>
+          <textarea class="text-input json-input" id="jsonInput" placeholder='There Match에서 다운로드한 JSON을 여기에 붙여넣으세요...'></textarea>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="loadBtn">불러오기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDITOR SECTION -->
+      <div id="editorSection">
+        <div class="divider"></div>
+
+        <!-- Project Summary -->
+        <div class="summary-bar" id="summaryBar"></div>
+
+        <!-- Module Tables -->
+        <div id="moduleEditor"></div>
+
+        <!-- Export -->
+        <div class="export-section">
+          <div class="btn-row">
+            <button class="btn btn-primary" id="exportClipboard">클립보드 복사</button>
+            <button class="btn btn-secondary" id="exportJSON">JSON 다운로드</button>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-secondary" id="backBtn">← 입력으로 돌아가기</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>thereafter &copy; 2024</p>
+  </footer>
+
+  <div class="toast" id="toast">복사 완료</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
